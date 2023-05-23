@@ -1,5 +1,5 @@
 import ScrollSuave from './modules/scroll-suave.js';
-import iniciarAnimacaoScroll from './modules/scroll-animacao.js';
+import ScrollAnima from './modules/ScrollAnima.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tab-nav.js';
 import Modal from './modules/modal.js';
@@ -19,7 +19,8 @@ accordion.init();
 const tabNav = new TabNav('[data-tab="menu"] li img', '[data-tab="content"] section');
 tabNav.init();
 
-iniciarAnimacaoScroll();
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
 
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
