@@ -31,8 +31,9 @@ toolTip.init();
 const dropDownMenu = new DropDownMenu('[data-dropdown]');
 dropDownMenu.init();
 
-const menuMobile = MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
+
 iniciarFuncionamento();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');

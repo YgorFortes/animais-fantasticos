@@ -29,7 +29,7 @@ export default class MenuMobile {
   }
 
   init() {
-    if (this.menuButto && this.menuList) {
+    if (this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
     }
     return this;
