@@ -3,6 +3,7 @@ import outersideClick from './outesideclick.js';
 export default class DropDownMenu {
   constructor(dropdownMenus, events) {
     this.dropdownMenus = document.querySelectorAll(dropdownMenus);
+
     // define touchstart e click como argumento padrão
     // de events caso o usuário não defina
     if (events === undefined) {
