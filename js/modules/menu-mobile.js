@@ -1,10 +1,11 @@
-import outersideClick from './outesideclick.js';
+import outesideClick from './outesideclick.js';
 
 export default class MenuMobile {
   constructor(menuButton, menuList, events) {
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelector(menuList);
     this.activeClass = 'ativo';
+
     if (events === undefined) {
       this.events = ['touchstart', 'click'];
     } else {
@@ -13,10 +14,11 @@ export default class MenuMobile {
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
-    outersideClick(this.menuList, this.events, () => {
+    outesideClick(this.menuList, this.events, () => {
       this.menuList.classList.remove(this.activeClass);
       this.menuButton.classList.remove(this.activeClass);
     });

@@ -5,9 +5,11 @@ export default function outersideClick(element, events, callback) {
   function handleOutsideClick(event) {
     if (!element.contains(event.target)) {
       element.removeAttribute(outside);
-      html.removeEventListener('click', handleOutsideClick);
+      events.forEach((userEvent) => {
+        html.removeEventListener(userEvent, handleOutsideClick);
+      });
+      callback();
     }
-    callback();
   }
 
   if (!element.hasAttribute(outside)) {

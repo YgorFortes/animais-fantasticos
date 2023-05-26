@@ -58,6 +58,7 @@
         display: block;
          animation: mostrar-right .3s forwards;
     }
+    
     .js .dropdown-menu {
         position: static;
         border: none;
